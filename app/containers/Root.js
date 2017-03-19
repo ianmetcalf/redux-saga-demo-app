@@ -1,10 +1,11 @@
 import m from 'mithril';
+import Test from './Test';
 
 const Root = {
   view({attrs}) {
     return (
       <div>
-        Hello World
+        <Test {...attrs} />
       </div>
     );
   },
