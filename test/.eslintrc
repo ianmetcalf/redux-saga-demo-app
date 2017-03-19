@@ -1,0 +1,13 @@
+{
+  "parser": "babel-eslint",
+
+  "env": {
+    "mocha": true
+  },
+
+  "rules": {
+    "strict": "error",
+    "func-names": "off",
+    "prefer-arrow-callback": "off"
+  }
+}

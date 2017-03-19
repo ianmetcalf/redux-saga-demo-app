@@ -1,0 +1,14 @@
+<header>
+  <h1>{{title}}</h1>
+  <p>Welcome to {{title}}</p>
+</header>
+
+<div id="root"></div>
+
+{{#forBlock 'scripts'}}
+<script src="{{asset '/build/index.js'}}" type="text/javascript" charset="utf-8"></script>
+{{/forBlock}}
+
+{{#forBlock 'stylesheets'}}
+<link rel="stylesheet" href="{{asset '/build/index.css'}}" />
+{{/forBlock}}
