@@ -1,0 +1,27 @@
+.container {
+  padding: 24px 12px;
+  border: 1px solid #666;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.container h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.explore {
+  display: block;
+  width: 100%;
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.explore input {
+  margin-left: 12px;
+  padding: 6px 12px;
+  border: 1px solid #666;
+  border-radius: 3px;
+}

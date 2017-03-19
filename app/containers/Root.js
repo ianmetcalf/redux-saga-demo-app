@@ -1,11 +1,11 @@
 import m from 'mithril';
-import Test from './Test';
+import Explore from './Explore';
 
 const Root = {
   view({attrs}) {
     return (
       <div>
-        <Test {...attrs} />
+        <Explore {...attrs} />
       </div>
     );
   },

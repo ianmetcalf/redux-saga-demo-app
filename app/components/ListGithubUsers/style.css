@@ -1,0 +1,21 @@
+.container {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.container li {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+
+.container img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.container h3 {
+  margin: 3px 3px 24px;
+}
