@@ -1,3 +1,4 @@
+import lowerCase from 'lodash/lowerCase';
 import {call, select, put} from 'redux-saga/effects';
 import {starredRepos, stargazers} from '../entities';
 import createRequest from '../lib/createRequest';
@@ -5,6 +6,7 @@ import createRequest from '../lib/createRequest';
 import {
   pendingRequest,
   completedRequest,
+  showMessage,
 } from '../actions';
 
 import {
@@ -31,5 +33,13 @@ function* fetchEntity({id, url, schema}) {
     const resp = yield call(createRequest, {url, schema});
 
     yield put(completedRequest(requestId, resp));
+
+    if (resp.error) {
+      yield put(showMessage({
+        body: `Failed to ${ lowerCase(requestId) }`,
+        type: 'error',
+        duration: 10,
+      }));
+    }
   }
 }

@@ -1,3 +1,8 @@
 export const NAVIGATE = 'NAVIGATE';
+
 export const PENDING_REQUEST = 'PENDING_REQUEST';
 export const COMPLETED_REQUEST = 'COMPLETED_REQUEST';
+
+export const SHOW_MESSAGE = 'SHOW_MESSAGE';
+export const CLEAR_MESSAGE = 'CLEAR_MESSAGE';
+export const RESET_MESSAGES = 'RESET_MESSAGES';
