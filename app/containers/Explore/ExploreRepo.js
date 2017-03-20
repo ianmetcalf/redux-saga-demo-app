@@ -4,6 +4,7 @@ import ListGithubUsers from '../../components/ListGithubUsers';
 
 import {
   getEntityById,
+  isRequesting,
 } from '../../selectors';
 
 const ExploreRepo = {
@@ -24,8 +25,11 @@ const ExploreRepo = {
       getEntityById(state, 'users', id)
     )).filter(u => u);
 
+    const requestId = `fetch_stargazers_for_${ owner }/${ name }`;
+    const loading = isRequesting(state, requestId);
+
     return (
-      <div className={classNames(className)}>
+      <div className={classNames(className, {loading})}>
         <h1>Stargazers for {repo.name}</h1>
 
         {stargazers.length ? (

@@ -4,6 +4,7 @@ import ListGithubRepos from '../../components/ListGithubRepos';
 
 import {
   getEntityById,
+  isRequesting,
 } from '../../selectors';
 
 const ExploreUser = {
@@ -23,8 +24,11 @@ const ExploreUser = {
       getEntityById(state, 'repos', id)
     )).filter(r => r);
 
+    const requestId = `fetch_starred_repos_for_${ login }`;
+    const loading = isRequesting(state, requestId);
+
     return (
-      <div className={classNames(className)}>
+      <div className={classNames(className, {loading})}>
         <h1>Repos starred by {user.login}</h1>
 
         {starred.length ? (
